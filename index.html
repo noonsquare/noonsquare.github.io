@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>눈스퀘어 NOON SQUARE</title>
-  <meta name="description" content="눈스퀘어 공식 웹사이트 — 매장 안내, 입점 문의, 오시는 길" />
+  <title>NOON SQUARE 눈스퀘어</title>
+  <meta name="description" content="명동 한복판의 어반 라이프 쉐어 플레이스, 눈스퀘어 NOON SQUARE. 매장 안내, 오시는 길, 입점 문의." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="#home" class="brand">NOON SQUARE</a>
+      <a href="#home" class="brand" aria-label="NOON SQUARE 홈">
+        <img src="images/logo.png" alt="NOON SQUARE" />
+      </a>
       <nav class="nav">
         <ul>
           <li><a href="#about">소개</a></li>
           <li><a href="#stores">매장</a></li>
-          <li><a href="#location">오시는 길</a></li>
           <li><a href="#leasing">입점 문의</a></li>
+          <li><a href="#location">오시는 길</a></li>
           <li><a href="#news">소식</a></li>
         </ul>
       </nav>
@@ -29,55 +32,349 @@
 
   <main>
 
+    <!-- HERO -->
     <section id="home" class="section section--hero">
-      <div class="container">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide is-active" style="background-image: url('images/hero/noonsquare_img_001.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('images/hero/noonsquare_img_002.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('images/hero/noonsquare_img_003.jpg');"></div>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow">Urban Life Share Place</p>
         <h1>NOON SQUARE</h1>
-        <p class="lead">일상에 빛이 머무는 곳, 눈스퀘어.</p>
+        <p class="lead">일상의 빛이 머무는 곳, 눈스퀘어.</p>
+      </div>
+      <div class="hero-dots" role="tablist" aria-label="히어로 슬라이드">
+        <button type="button" class="hero-dot is-active" aria-label="슬라이드 1"></button>
+        <button type="button" class="hero-dot" aria-label="슬라이드 2"></button>
+        <button type="button" class="hero-dot" aria-label="슬라이드 3"></button>
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section">
-      <div class="container">
-        <h2>눈스퀘어 소개</h2>
-        <p>여기에 공간 컨셉, 운영 철학, 브랜드 스토리가 들어갑니다. (임시 텍스트)</p>
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="images/about/about_main.jpg" alt="명동 거리에서 본 눈스퀘어 전경" />
+        </div>
+        <div class="about-text">
+          <p class="eyebrow">About</p>
+          <h2>Urban Life Share Place</h2>
+          <div class="prose">
+            <p>1970년, 명동의 관문에 <strong>코스모스백화점</strong>으로 첫 문을 연 후 <strong>아바타몰</strong>을 거쳐 2009년 <strong>눈스퀘어</strong>로 </p>
+            <p>반세기 넘게 같은 자리에서 명동을 찾는 사람들의 일상과 함께해 온 명동의 상징적 리테일 공간</p>
+            <p>다채로운 브랜드와 사람들이 만나는 어반 라이프 쉐어 플레이스, NOON SQUARE.</p>
+          </div>
+
+          <ol class="timeline timeline--compact" aria-label="눈스퀘어 변천사">
+            <li class="timeline-item">
+              <span class="timeline-year">1970</span>
+              <span class="timeline-label">코스모스백화점 개장</span>
+              <span class="timeline-desc">국내 최대 규모 5층 백화점.</span>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-year">1990s</span>
+              <span class="timeline-label">아바타몰 시대</span>
+              <span class="timeline-desc">새로운 쇼핑 공간으로 변모.</span>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-year">2009 —</span>
+              <span class="timeline-label">NOON SQUARE 오픈</span>
+              <span class="timeline-desc">어반 라이프 쉐어 플레이스로 재탄생.</span>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
+    <!-- STORES -->
     <section id="stores" class="section section--alt">
       <div class="container">
+        <p class="eyebrow">Stores</p>
         <h2>매장 안내</h2>
-        <p>층별 입점 매장, 카테고리별 매장 목록이 들어갑니다. (임시 텍스트)</p>
+
+        <div class="category-grid">
+
+          <article class="category-card">
+            <p class="category-eyebrow">Lifestyle</p>
+            <h3>라이프스타일</h3>
+            <ul class="store-list">
+              <li class="store-item" style="--logo: url('images/brands/zara.png');">
+                <div class="store-info">
+                  <p class="name">ZARA</p>
+                  <p class="desc">글로벌 SPA 패션 브랜드</p>
+                </div>
+                <span class="store-floor">1·2·3F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/nike.png');">
+                <div class="store-info">
+                  <p class="name">NIKE</p>
+                  <p class="desc">글로벌 스포츠·패션 브랜드</p>
+                </div>
+                <span class="store-floor">1·2·3F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/evisu.png');">
+                <div class="store-info">
+                  <p class="name">EVISU 에비수</p>
+                  <p class="desc">UNIQUE JEAN을 표방하는 진 캐주얼 브랜드</p>
+                </div>
+                <span class="store-floor">2F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/charles_keith.png');">
+                <div class="store-info">
+                  <p class="name">CHARLES &amp; KEITH</p>
+                  <p class="desc">풋웨어 &amp; 액세서리</p>
+                </div>
+                <span class="store-floor">2F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/handmade.png');">
+                <div class="store-info">
+                  <p class="name">핸드메이드 리퍼블릭</p>
+                  <p class="desc">실버 주얼리·가죽·원석·맞춤 제작</p>
+                </div>
+                <span class="store-floor">B1·1F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/wiggle.png');">
+                <div class="store-info">
+                  <p class="name">위글위글타운 명동점</p>
+                  <p class="desc">일상의 명도와 채도를 높이는 라이프 스타일 브랜드</p>
+                </div>
+                <span class="store-floor">4F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/hanyang.png');">
+                <div class="store-info">
+                  <p class="name">한양문고 명동눈스퀘어점</p>
+                  <p class="desc">Book &amp; Cafe &amp; Culture</p>
+                </div>
+                <span class="store-floor">B1F</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card">
+            <p class="category-eyebrow">F&amp;B</p>
+            <h3>식음</h3>
+            <ul class="store-list">
+              <li class="store-item" style="--logo: url('images/brands/blue_bottle.png');">
+                <div class="store-info">
+                  <p class="name">BLUE BOTTLE 명동</p>
+                  <p class="desc">오전 08:00 ~ 오후 21:00</p>
+                </div>
+                <span class="store-floor">1F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/zacaffe.png');">
+                <div class="store-info">
+                  <p class="name">ZACAFFE</p>
+                  <p class="desc">ZARA가 선보이는 감각적인 카페</p>
+                </div>
+                <span class="store-floor">3F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/dimdimsum.png');">
+                <div class="store-info">
+                  <p class="name">딤딤섬</p>
+                  <p class="desc">오리지널 홍콩 딤섬 전문점</p>
+                </div>
+                <span class="store-floor">B1F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/mikado.png');">
+                <div class="store-info">
+                  <p class="name">미카도스시 명동점</p>
+                  <p class="desc">신선하고 건강한 초밥, 균일가</p>
+                </div>
+                <span class="store-floor">B1F</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card">
+            <p class="category-eyebrow">Medical</p>
+            <h3>메디컬</h3>
+            <ul class="store-list">
+              <li class="store-item" style="--logo: url('images/brands/leenjang.png');">
+                <div class="store-info">
+                  <p class="name">리앤장의원 명동</p>
+                  <p class="desc">리얼 뷰티를 찾아드립니다</p>
+                </div>
+                <span class="store-floor">5F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/yupick.png');">
+                <div class="store-info">
+                  <p class="name">유픽의원</p>
+                  <p class="desc">당신이 선택한 아름다움</p>
+                </div>
+                <span class="store-floor">5F</span>
+              </li>
+              <li class="store-item" style="--logo: url('images/brands/lielle.png');">
+                <div class="store-info">
+                  <p class="name">리엘르의원</p>
+                  <p class="desc">건강하고 자연스러운 아름다움</p>
+                </div>
+                <span class="store-floor">5F</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card">
+            <p class="category-eyebrow">Hotel</p>
+            <h3>호텔</h3>
+            <ul class="store-list">
+              <li class="store-item">
+                <div class="store-info">
+                  <p class="desc">입점 정보 업데이트 중</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card">
+            <p class="category-eyebrow">Coworking</p>
+            <h3>코워킹</h3>
+            <ul class="store-list">
+              <li class="store-item">
+                <div class="store-info">
+                  <p class="name">JustCo 저스트코</p>
+                  <p class="desc">유연한 멤버십 공유 오피스</p>
+                </div>
+                <span class="store-floor">6F</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="category-card">
+            <p class="category-eyebrow">Entertainment</p>
+            <h3>엔터테인먼트</h3>
+            <ul class="store-list">
+              <li class="store-item" style="--logo: url('images/brands/cgv.png');">
+                <div class="store-info">
+                  <p class="name">CGV 명동</p>
+                  <p class="desc">대한민국 한류 문화의 중심</p>
+                </div>
+                <span class="store-floor">8F</span>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p class="stores-note">전체 입점 매장은 시기에 따라 변동될 수 있습니다.</p>
       </div>
     </section>
 
-    <section id="location" class="section">
+    <!-- LEASING -->
+    <section id="leasing" class="section section--compact">
       <div class="container">
-        <h2>오시는 길</h2>
-        <p>주소, 지도, 대중교통, 주차 안내, 운영시간이 들어갑니다. (임시 텍스트)</p>
-      </div>
-    </section>
-
-    <section id="leasing" class="section section--alt">
-      <div class="container">
+        <p class="eyebrow">Leasing</p>
         <h2>입점 문의</h2>
-        <p>입점 안내, 문의 연락처, 신청 양식이 들어갑니다. (임시 텍스트)</p>
+        <div class="prose">
+          <p>입점 및 임대 문의는 아래 이메일로 연락 주시기 바랍니다.<br />
+            <span class="muted">For leasing details and availabilities, please contact us by email below.</span>
+          </p>
+          <p>
+            <a class="email-link" href="mailto:Jeongyeon.Lee@savills.co.kr">Jeongyeon.Lee@savills.co.kr</a>
+          </p>
+        </div>
       </div>
     </section>
 
-    <section id="news" class="section">
+    <!-- LOCATION -->
+    <section id="location" class="section section--alt">
       <div class="container">
-        <h2>공지·소식</h2>
-        <p>이벤트, 휴무, 공지사항이 들어갑니다. (임시 텍스트)</p>
+        <p class="eyebrow">Location</p>
+        <h2>오시는 길</h2>
+
+        <div class="info-grid">
+          <div class="info-block">
+            <h4>Address</h4>
+            <p>서울특별시 중구 명동길 14<br />눈스퀘어</p>
+          </div>
+          <div class="info-block">
+            <h4>Hours</h4>
+            <p>매일 AM 11:00 — PM 10:00</p>
+          </div>
+          <div class="info-block">
+            <h4>Transit</h4>
+            <p>
+              2호선 을지로입구역 도보 약 2분<br />
+              4호선 명동역 도보 약 5분
+            </p>
+          </div>
+        </div>
+
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=서울특별시+중구+명동길+14+눈스퀘어&output=embed"
+            width="100%" height="360" style="border:0;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="눈스퀘어 위치 지도"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="section section--compact">
+      <div class="container">
+        <p class="eyebrow">News</p>
+        <h2>공지 · 소식</h2>
+        <ul class="news-list">
+          <li><span class="news-tag">공지</span> [ZARA] Renewal OPEN</li>
+          <li><span class="news-tag">이벤트</span> [나이키 서울] 2024 시즌 오프 세일</li>
+          <li><span class="news-tag">공지</span> 1F 팝업 존 — 위글위글(wiggle wiggle) OPEN</li>
+          <li><span class="news-tag">공지</span> 1F 에이랜드 · 에이굿즈 팝업 OPEN</li>
+          <li><span class="news-tag">공지</span> B2F 한양문고 GRAND OPEN</li>
+        </ul>
+        <p class="muted news-note">이전 소식은 추후 별도 페이지로 정리할 예정입니다.</p>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand"><img src="images/logo.png" alt="NOON SQUARE" /></p>
+        <p class="muted">서울특별시 중구 명동길 14</p>
+        <p class="muted">매일 AM 11:00 — PM 10:00</p>
+      </div>
+      <div>
+        <p class="social">
+          <a href="https://www.instagram.com/noonsquare/" target="_blank" rel="noopener">Instagram</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://ko-kr.facebook.com/NoonSquare/" target="_blank" rel="noopener">Facebook</a>
+        </p>
+      </div>
+    </div>
     <div class="container">
-      <p>© NOON SQUARE</p>
+      <p class="copyright">© NOON SQUARE. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.hero-slide');
+      var dots = document.querySelectorAll('.hero-dot');
+      if (slides.length === 0) return;
+      var current = 0;
+      var timer;
+
+      function go(next) {
+        slides[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+        current = (next + slides.length) % slides.length;
+        slides[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+      }
+
+      function start() { timer = setInterval(function () { go(current + 1); }, 5000); }
+      function reset() { clearInterval(timer); start(); }
+
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { go(i); reset(); });
+      });
+
+      start();
+    })();
+  </script>
 
 </body>
 </html>
