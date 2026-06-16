@@ -87,6 +87,12 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 .nav a:hover { color: var(--color-accent); }
 
+.nav-short { display: none; }
+@media (max-width: 640px) {
+  .nav-full { display: none; }
+  .nav-short { display: inline; }
+}
+
 /* ── Sections ─────────────────────────────────────────── */
 .section {
   min-height: 100vh;
@@ -511,7 +517,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 /* ── Leasing ──────────────────────────────────────────── */
 .email-link {
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--color-accent);
   border-bottom: 1px solid currentColor;
@@ -544,16 +550,20 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 /* ── Footer ───────────────────────────────────────────── */
 .site-footer {
-  padding: 32px 0 16px;
-  border-top: 1px solid var(--color-line);
-  background: #fafafa;
+  padding: 36px 0 18px;
+  background: #1a1a1a;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
 }
+.site-footer a { color: rgba(255, 255, 255, 0.88); }
+.site-footer a:hover { color: #fff; }
+.site-footer .muted { color: rgba(255, 255, 255, 0.5); }
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 .footer-grid p { margin: 0 0 8px; }
 .footer-brand {
@@ -564,16 +574,17 @@ ul { list-style: none; padding: 0; margin: 0; }
   height: 20px;
   width: auto;
   display: block;
+  filter: brightness(0) invert(1);
 }
-.social a { color: #444; }
-.social a:hover { color: var(--color-accent); }
+.social a { color: rgba(255, 255, 255, 0.75); }
+.social a:hover { color: #fff; }
 .copyright {
   font-size: 12px;
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.5);
   text-align: center;
   margin: 0;
-  padding-top: 24px;
-  border-top: 1px solid var(--color-line);
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ── Responsive ───────────────────────────────────────── */
