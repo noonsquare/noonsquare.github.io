@@ -108,6 +108,8 @@ ul { list-style: none; padding: 0; margin: 0; }
   padding: 20px 0;
 }
 
+.section--snug { min-height: 0; }
+
 .eyebrow {
   font-size: 13px;
   font-weight: 500;
@@ -355,12 +357,30 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 
 .category-card {
+  position: relative;
   background: #fff;
   border: 1px solid var(--color-line);
   border-radius: 12px;
   padding: 28px 24px;
   display: flex;
   flex-direction: column;
+}
+
+.category-floor {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  border: 1px solid currentColor;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  line-height: 1;
 }
 
 .category-eyebrow {
@@ -416,6 +436,9 @@ ul { list-style: none; padding: 0; margin: 0; }
 .store-item:hover::before {
   background-position: right 64px center;
 }
+
+/* JustCo 로고만 1.2배 */
+.store-item[style*="justco"]::before { background-size: 108px auto; }
 
 .store-info { position: relative; z-index: 1; flex: 1; min-width: 0; }
 
